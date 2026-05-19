@@ -9,6 +9,7 @@ public class EventsScript : MonoBehaviour
     private bool startCount = false;
     public LightsOut light0, light1, light2, light3, light4, light5, light6, light7, light8, light9;
     public SlamCode slam;
+    public ScreenChange screen;
     void Start()
     {
         playBackThreshold = Random.Range(5.01f, 10f);
@@ -36,6 +37,7 @@ public class EventsScript : MonoBehaviour
                 light7.giveCheck();
                 light8.giveCheck();
                 light9.giveCheck();
+                screen.Go();
                 slam.getCheck();
                 startCount = false;
                 heartbeat.volume = 0.09f;
