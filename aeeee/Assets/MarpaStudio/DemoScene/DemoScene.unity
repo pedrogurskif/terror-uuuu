@@ -2457,7 +2457,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238003027}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9361,7 +9361,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869797333}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9864,7 +9864,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915603027}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10553,7 +10553,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950696376}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12719,7 +12719,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198998474}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13713,7 +13713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1d7f4f7cd7e78da4a82cd44f69eb0772, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15015,7 +15015,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405712643}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16298,7 +16298,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522461013}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16734,7 +16734,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546363438}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18739,8 +18739,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.89239913
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3696438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.23911758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.099045746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239100585477912294, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5241267463746980526, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Name
@@ -20593,7 +20625,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921003204}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -20993,7 +21025,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941686351}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -22895,9 +22927,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
-  m_Range: 6.3681273
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 20
+  m_Range: 6.368127
   m_SpotAngle: 127
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 10, y: 10}
