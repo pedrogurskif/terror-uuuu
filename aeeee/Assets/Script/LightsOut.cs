@@ -14,6 +14,7 @@ public class LightsOut : MonoBehaviour
     public bool playSoundCheck = true;
     public bool shatterSoundCheck = false;
     public bool check = false;
+    public Light directLight;
     void Start()
     {
         light = gameObject.GetComponent<Light>();
@@ -33,12 +34,13 @@ public class LightsOut : MonoBehaviour
         }
         if(timerDie >= 0 && timerDie < 10)
         {
-            Blink(0.05f, 0f, 15f);         
+            Blink(0.05f, 0f, 8f);         
         }
         else if(timerDie >= 10 && !thatLight && shatterSoundCheck == false)
         {
             light.intensity = 0;
             som.Play();
+            directLight.color = Color.black;
             shatterSoundCheck = true;
         }
         else if(timerDie>= 10 && thatLight)
