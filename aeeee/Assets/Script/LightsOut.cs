@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class LightsOut : MonoBehaviour
 {
-    private Light light;
+    public Light light;
+    public AudioSource som;
+    public AudioSource blink;
     private float timer = 0f;
-    private float timerDie = 0f;
+    private float timerDie = -0.0001f;
+    public bool thatLight = false;
+    public bool playSoundCheck = true;
+    public bool shatterSoundCheck = false;
+    public bool check = false;
     void Start()
     {
         light = gameObject.GetComponent<Light>();
@@ -15,24 +21,45 @@ public class LightsOut : MonoBehaviour
 
     void Update()
     {
-        timerDie += Time.fixedDeltaTime;
-        if(timerDie < 10)
+        if(check)
         {
-            Blink();
+            timerDie += Time.deltaTime;
         }
-        else
+        Debug.Log(timerDie);
+        if(timerDie > 0 && playSoundCheck == false)
+        {
+            blink.Play();
+            playSoundCheck = true;
+        }
+        if(timerDie >= 0 && timerDie < 10)
+        {
+            Blink(0.05f, 0f, 15f);         
+        }
+        else if(timerDie >= 10 && !thatLight && shatterSoundCheck == false)
         {
             light.intensity = 0;
+            som.Play();
+            shatterSoundCheck = true;
+        }
+        else if(timerDie>= 10 && thatLight)
+        {
+            blink.Stop();
+            Blink(0.15f, 0f, 5f);
         }
     }
 
-    void Blink()
+    void Blink(float cd, float botLim, float topLim)
     {
-        timer += Time.fixedDeltaTime;
-        if(timer>=0.25f)
+        timer += Time.deltaTime;
+        if(timer>=cd)
         {
-            light.intensity = Random.Range(0, 15f);
+            light.intensity = Random.Range(botLim, topLim);
             timer = 0;
         }
+    }
+
+    public void giveCheck()
+    {
+        check = true;
     }
 }
