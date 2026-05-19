@@ -26,7 +26,6 @@ public class LightsOut : MonoBehaviour
         {
             timerDie += Time.deltaTime;
         }
-        Debug.Log(timerDie);
         if(timerDie > 0 && playSoundCheck == false)
         {
             blink.Play();

@@ -26,7 +26,7 @@ public class FirstPerson : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector2 look = lookAction.action.ReadValue<Vector2>();
 
