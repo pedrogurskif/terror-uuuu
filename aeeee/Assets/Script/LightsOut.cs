@@ -45,7 +45,7 @@ public class LightsOut : MonoBehaviour
         else if(timerDie>= 10 && thatLight)
         {
             blink.Stop();
-            light.color = Color.white;
+            light.color = Color.red;
             Blink(0.15f, 0f, 5f);
         }
     }
