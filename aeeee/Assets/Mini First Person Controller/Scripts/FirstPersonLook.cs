@@ -10,6 +10,8 @@ public class FirstPersonLook : MonoBehaviour
     Vector2 velocity;
     Vector2 frameVelocity;
 
+    public ScreenChange screen;
+
 
     void Reset()
     {
@@ -35,5 +37,21 @@ public class FirstPersonLook : MonoBehaviour
         // Rotate camera up-down and controller left-right from velocity.
         transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
         character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Finish")
+        {
+            screen.CHECKVIEW(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Finish")
+        {
+            screen.CHECKVIEW(false);
+        }
     }
 }

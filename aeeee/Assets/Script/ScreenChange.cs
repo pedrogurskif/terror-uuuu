@@ -13,6 +13,7 @@ public class ScreenChange : MonoBehaviour
     public bool aaaaa = false;
     public Graphic image;
     private float alphaVal;
+    public bool checkView = false;
     void Start()
     {
         
@@ -20,7 +21,7 @@ public class ScreenChange : MonoBehaviour
 
     void Update()
     {
-        if(renderer.isVisible)
+        if(checkView)
         {
             Debug.Log("visivel");
         }
@@ -56,7 +57,7 @@ public class ScreenChange : MonoBehaviour
             som.volume = 0.01f;
             render.material = matC;
         }
-        if(checkD && renderer.isVisible)
+        if(checkD && checkView)
         {
             aaaaa = true;
         }
@@ -79,5 +80,10 @@ public class ScreenChange : MonoBehaviour
     public void Go()
     {
         check = true;
+    }
+
+    public void CHECKVIEW(bool check)
+    {
+        checkView = check;
     }
 }
