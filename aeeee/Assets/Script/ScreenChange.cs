@@ -22,7 +22,7 @@ public class ScreenChange : MonoBehaviour
         if(timer >= 4f && checkA == false)
         {
             checkA = true;
-            som.volume = 0.1f;
+            som.volume = 0.18f;
             render.material = matGlitch;
         }
         if(timer >= 5f && checkB == false)
@@ -34,7 +34,7 @@ public class ScreenChange : MonoBehaviour
         if(timer >= 9 && checkC == false)
         {
             checkC = true;
-            som.volume = 0.1f;
+            som.volume = 0.18f;
             render.material = matGlitch;
         }
         if(timer >= 10 && checkD == false)
