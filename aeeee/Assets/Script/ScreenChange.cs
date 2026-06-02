@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenChange : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class ScreenChange : MonoBehaviour
     public bool check = false;
     public bool checkA, checkB, checkC, checkD = false;
     public float timer = 0;
+    public Renderer renderer;
+    public bool aaaaa = false;
+    public Graphic image;
+    private float alphaVal;
     void Start()
     {
         
@@ -15,6 +20,14 @@ public class ScreenChange : MonoBehaviour
 
     void Update()
     {
+        if(renderer.isVisible)
+        {
+            Debug.Log("visivel");
+        }
+        else
+        {
+            Debug.Log("nao visivel");
+        }
         if(check)
         {
             timer += Time.deltaTime;
@@ -43,7 +56,25 @@ public class ScreenChange : MonoBehaviour
             som.volume = 0.01f;
             render.material = matC;
         }
+        if(checkD && renderer.isVisible)
+        {
+            aaaaa = true;
+        }
+        if(alphaVal >= 2f)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
     }
+
+    void FixedUpdate()
+    {
+        if(aaaaa)
+            {
+                alphaVal += 0.2f;
+                image.color = new Color(0, 0, 0, alphaVal);
+            }
+    }
+
 
     public void Go()
     {

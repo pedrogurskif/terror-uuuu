@@ -11,29 +11,14 @@ public class EventsScript : MonoBehaviour
     public LightsOut light0, light1, light2, light3, light4, light5, light6, light7, light8, light9;
     public SlamCode slam;
     public ScreenChange screen;
-    private bool blackScreen;
-    private bool aaaa = false;
-    private float endingTimer = 0;
-    public Graphic image;
-    private Color blackImage;
-    private float alphaVal;
 
     void Start()
     {
         playBackThreshold = Random.Range(5.01f, 10f);
-        blackImage = image.color;
     }
 
     void Update()
     {
-        if(blackScreen)
-        {
-            endingTimer += Time.deltaTime;
-            if(endingTimer>=4.5)
-            {
-                UnityEditor.EditorApplication.isPlaying = false;
-            }
-        }
         if(check)
         {
             timer += Time.deltaTime;
@@ -62,15 +47,6 @@ public class EventsScript : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        if(endingTimer>=4)
-            {
-                alphaVal += 0.1f;
-                image.color = new Color(0, 0, 0, alphaVal);
-            }
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.name == "Player")
@@ -94,7 +70,6 @@ public class EventsScript : MonoBehaviour
             timer = 0;
             heartbeat.volume = 0.13f;
             heartbeat.pitch = 1.6f;
-            blackScreen = true;
         }
     }
 }
